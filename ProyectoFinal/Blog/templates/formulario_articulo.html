@@ -1,4 +1,9 @@
 {% extends "formulario_madre.html" %}
 
 {% block inserte_aqui_su_contenido %}
+
+{% if formulario.errors %}
+<p style="color: red;" > Ha surgido un ERROR alguno de los datos ingresados es incorrecto </p>
+{% endif %}
+
 {% endblock %}

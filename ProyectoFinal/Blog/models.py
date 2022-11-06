@@ -1,6 +1,7 @@
 from statistics import mode
 from unittest.util import _MAX_LENGTH
 from django.db import models
+from Blog.forms import ArticuloForm, AutorForm, SeccionForm
 
 
 class Autor(models.Model):
@@ -19,7 +20,7 @@ class Autor(models.Model):
 class Articulo(models.Model):
     titulo = models.CharField(max_length=30)
     texto = models.CharField(max_length=350)
-    fecha = models.DateField(null=True)
+    fecha = models.DateField(null=False)
 
     def __str__(self) :
         return self.titulo # para que aparezca mas bonito en el administrador

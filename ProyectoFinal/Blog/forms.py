@@ -17,4 +17,4 @@ class ArticuloForm(forms.Form):
 
 class SeccionForm(forms.Form):
         
-    nombre = forms.CharField(max_length=30)   
+    nombre = forms.CharField(max_length=30)

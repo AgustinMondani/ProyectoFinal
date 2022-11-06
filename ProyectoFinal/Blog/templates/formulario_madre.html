@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>My Blog</title>
+</head>
+<body style="background-color: lightgrey ;">
+    
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/inicio/">Inicio</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/autor/">Autor</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/articulo/">Articulo</a>
+        <a class="nav-link disabled" href="http://127.0.0.1:8000/seccion/">Seccion</a>
+      </nav>
+
+
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{ formulario.as_table }}
+        </table>
+        <input type="submit" value="Guardar">
+    </form>
+
+</body>
+</html>
+
+{% block inserte_aqui_su_contenido %}
+{% endblock %}

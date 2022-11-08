@@ -1,4 +1,14 @@
 {% extends "formulario_madre.html" %}
 
+
 {% block inserte_aqui_su_contenido %}
+
+    {% for resultado in resultados %}
+
+        <h2><strong> Resultado de la busqueda:   </strong> El titulo es:{{resultado.titulo}}</h2>
+        <h2>{{resultado.texto}}</h2>
+        <h2><strong> Fexcha de creacion:   </strong>{{resultado.fecha}}</h2>
+
+    {% endfor %}
+
 {% endblock %}

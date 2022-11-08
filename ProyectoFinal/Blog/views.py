@@ -69,11 +69,13 @@ def formulario_seccion(request):
     contexto = {"formulario" : formulario}
     return render(request, "formulario_exitoso.html", context = contexto)
 
-def buscar(request):
+def buscar_articulo(request):
 
     if request.method == "GET":
         return render(request, "formulario_busqueda.html")
 
     if request.method == "POST":
-        contexto = {}
+        titulo_a_buscar = request.POST["titulo"]
+        result_busqueda = Articulo.objects.filter(titulo = titulo_a_buscar)
+        contexto = {"resultados": result_busqueda}
         return render(request, "resultado_busqueda.html", context = contexto)

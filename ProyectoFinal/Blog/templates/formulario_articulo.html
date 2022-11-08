@@ -2,6 +2,13 @@
 
 {% block inserte_aqui_su_contenido %}
 
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+
 {% if formulario.errors %}
 <p style="color: red;" > Ha surgido un ERROR alguno de los datos ingresados es incorrecto </p>
 {% endif %}
